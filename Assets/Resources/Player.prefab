@@ -129,9 +129,9 @@ GameObject:
   - component: {fileID: 9075005127173122709}
   - component: {fileID: 9075005127173122714}
   - component: {fileID: 9075005127173122715}
-  - component: {fileID: -9114858480067421908}
   - component: {fileID: 2281016656954691015}
   - component: {fileID: -4786172786373548534}
+  - component: {fileID: 5836019866393529795}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -308,22 +308,6 @@ MonoBehaviour:
   HP: 0
   _hitSound: {fileID: 0}
   _healSound: {fileID: 0}
---- !u!114 &-9114858480067421908
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9075005127173122707}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ShowLayerWeightsInspector: 1
-  ShowParameterInspector: 1
-  m_SynchronizeParameters: []
-  m_SynchronizeLayers: []
 --- !u!114 &2281016656954691015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -359,11 +343,24 @@ MonoBehaviour:
   OwnershipTransfer: 0
   observableSearch: 2
   ObservedComponents:
-  - {fileID: -9114858480067421908}
   - {fileID: 2281016656954691015}
+  - {fileID: 88684888902413832}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &5836019866393529795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9075005127173122707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4b6c5ee203390446b34f4e96fc91839, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  virtualCamera: {fileID: 6050549893607733494, guid: 8e7b9035dd4f1c74da84cc4d29211bb2, type: 3}
 --- !u!1 &9075005127404646170
 GameObject:
   m_ObjectHideFlags: 0
@@ -582,6 +579,44 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c564c8c0d0cdc45429417f315e9f3e41, type: 3}
+--- !u!1 &4015348712137719670 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5352958571798197664, guid: c564c8c0d0cdc45429417f315e9f3e41, type: 3}
+  m_PrefabInstance: {fileID: 9075005125850008278}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &88684888902413832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4015348712137719670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowLayerWeightsInspector: 1
+  ShowParameterInspector: 1
+  m_SynchronizeParameters:
+  - Type: 4
+    SynchronizeType: 0
+    Name: jump
+  - Type: 4
+    SynchronizeType: 0
+    Name: run
+  - Type: 4
+    SynchronizeType: 0
+    Name: attack
+  - Type: 4
+    SynchronizeType: 0
+    Name: hit
+  - Type: 4
+    SynchronizeType: 0
+    Name: die
+  m_SynchronizeLayers:
+  - SynchronizeType: 0
+    LayerIndex: 0
 --- !u!95 &4285187900029511415 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5082574569444486177, guid: c564c8c0d0cdc45429417f315e9f3e41, type: 3}
